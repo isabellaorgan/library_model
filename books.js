@@ -1,8 +1,12 @@
 'use strict';
 
-function Book(author, title) {
-  this.AuthorName = author;
-  this.bookTitle = title;
-}
+var bookModule = (function () {
+  return {
+    makeBook: function(author, title, genre) {
+      console.log("The book " + title + "has been added to the library.");
+      return bookModule;
+    }
+  };
+})();
 
-exports.booksModule = books;
+exports.bookModule = bookModule;
