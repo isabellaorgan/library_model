@@ -2,9 +2,16 @@
 
 var Book = require('./books');
 
-function Shelf(genre) {
-  this.shelfGenre = genre;
-  this.book = [];
+var shelfModule = (function () {
+  return {
+    buildShelf: function(genreName) {
+      return shelfModule[genreName] = {
+        name: genreName,
+        shelfArray: []
+      };
+    }
+
+  }
 }
 
 Shelf.prototype.addBook = function(author, title) {

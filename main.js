@@ -8,7 +8,7 @@ book.bookModule.makeBook("Stephen King", "It", "Horror");
 book.bookModule.makeBook("Gillian Flynn", "Gone Girl", "Mystery");
 book.bookModule.makeBook("Mark Z. Danielewski", "House of Leaves", "Ergodic");
 
-shelf.shelfModule.makeShelf("Horror");
+shelf.shelfModule.buildShelf("Horror");
 shelf.shelfModule.deleteShelf("Horror");
 shelf.shelfModule.addBook("Stephen King", "It", "Horror");
 shelf.shelf.Module.removeBook("Stephen King", "It", "Horror");
