@@ -2,7 +2,7 @@
 
 var shelf = require('./shelves');
 
-var library = (function () {
+var libraryModule = (function () {
   return {
     addShelf: function(genreName) {
       return library[genreName.name] = genreName;
