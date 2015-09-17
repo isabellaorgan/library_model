@@ -2,15 +2,16 @@
 
 var shelf = require('./shelves.js');
 
-var libraryModule = (function() {
+var libraryModule;
+libraryModule = (function () {
   return {
-    addShelf: function(genreName) {
-      console.log("Add " + genreName + " shelf to library.");
+    addShelf: function (genre) {
+      console.log("Add " + genre + " shelf to library.");
       return libraryModule;
     },
-    removeShelf: function(genreName) {
-      delete libraryModule[genreName.name];
-      console.log("Remove " + genreName + " shelf from library.");
+    removeShelf: function (genre) {
+      delete libraryModule[genre.name];
+      console.log("Remove " + genre + " shelf from library.");
     }
   };
 })();

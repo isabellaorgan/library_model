@@ -2,24 +2,25 @@
 
 var book = require('./books.js');
 
-var shelfModule = (function () {
+  var shelfModule = (function () {
   return {
-    buildShelf: function(genreName) {
-      return shelfModule[genreName];
+    buildShelf: function (genre) {
+      console.log("The " + genre + " shelf has been added to the library shelves.");
+      return shelfModule[genre];
     },
-    deleteShelf: function(genreName) {
-      delete shelfModule[genreName];
-      console.log("The " + genreName + " shelf has been removed from the library.");
+    deleteShelf: function (genre) {
+      delete shelfModule[genre];
+      console.log("The " + genre + " shelf has been removed from the library.");
     },
-    addBook: function(author, title, genre) {
-      console.log("The book " + title + " has been shelved.");
+    addBook: function (author, title, genre) {
+      console.log("The book " + title + " by " + author + " has been shelved on the " + genre + " shelf.");
       return title;
     },
-    removeBook: function(author, title, genre) {
-      console.log("The book " + title + " has been removed from the shelf.");
+    removeBook: function (author, title, genre) {
+      console.log("The book " + title + " by " + author + " has been removed from the " + genre + " shelf.");
       delete [book.bookTitle];
     }
   };
 })();
 
-exports.shelvesModule = shelfModule;
+exports.shelfModule = shelfModule;
