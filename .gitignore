@@ -1,9 +1,1 @@
-.idea
-idea/.name
-.idea/code_chal_library.iml
-.idea/deployment.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
-karma.conf.js
+Makefile
