@@ -1,0 +1,19 @@
+{
+  "name": "code_chal_library",
+  "version": "1.0.0",
+  "description": "library model challenge",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isabellaorgan/library_model.git"
+  },
+  "author": "Isabella Organ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isabellaorgan/library_model/issues"
+  },
+  "homepage": "https://github.com/isabellaorgan/library_model#readme"
+}
