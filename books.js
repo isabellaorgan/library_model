@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 var Book = function(title, author, shelf, aorr, idNum) {
   this.title = title;
@@ -9,25 +9,25 @@ var Book = function(title, author, shelf, aorr, idNum) {
   this.removeBook = function() {
     this.aorr = "removed";
     console.log(this.title + " " + this.aorr);
-    bookAorr(books);
+    
   };
   this.addBook = function() {
     this.aorr = "onshelf";
     console.log(this.title + " " + this.aorr);
-    // bookAorr(books);
+
   };
 };
 
 var itSk = new Book("It", "Stephen King", "horror", "onshelf", "itSk");
-var rdTh = new Book("Red Dragon", "Thomas Harris", 'horror', 'removed', 'rdTh');
-var wwCb= new Book("WeaveWorld", "Clive Barker", "horror", 'onshelf', 'wwCb');
+var rdTh = new Book("Red Dragon", "Thomas Harris", "horror", "removed", "rdTh");
+var wwCb = new Book("WeaveWorld", "Clive Barker", "horror", "onshelf", "wwCb");
 
-// var goneGirl = new Book("Gone Girl", "Gillian Flynn", "mystery", "removed");
-// var dragonTattoo = new Book("The Girl With the Dragon Tattoo", "Stieg Larssen", "mystery", "onshelf");
-// var goneGirl = new Book("The Maltese Falcon", "Dashiell Hammett", "mystery", "onshelf");
+var ggGf = new Book("Gone Girl", "Gillian Flynn", "mystery", "removed", "ggGf");
+var dtSl = new Book("The Girl With the Dragon Tattoo", "Stieg Larssen", "mystery", "onshelf", "dtSl");
+var mfDh = new Book("The Maltese Falcon", "Dashiell Hammett", "mystery", "onshelf", "mfDh");
 
-// var theMartian = new Book("The Martian", "Andy Weir", "scifi", "onshelf");
-// var theMartian = new Book("The Martian", "Andy Weir", "scifi", "onshelf");
-// var theMartian = new Book("The Martian", "Andy Weir", "scifi", "removed");
+var tmAw = new Book("The Martian", "Andy Weir", "scifi", "onshelf", "tmAw");
+var cbaCfb = new Book("Code Breakers: Alpha", "Colin F. Barnes", "scifi", "onshelf", "cbaCfb");
+var dFh = new Book("Dune", "Frank Herbert", "scifi", "removed", "dFh");
 
-var books = [itSk, rdTh, wwCb];
+var books = [itSk, rdTh, wwCb, ggGf, dtSl, mfDh, tmAw, cbaCfb, dFh];

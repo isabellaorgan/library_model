@@ -6,18 +6,15 @@ var horrorBooks = [],
     mysteryBooks = [],
     sciFiBooks = [];
 
-var horror = function(books) {
+function horror(books) {
   horrorBooks = [];
   _.forEach(books, function(books) {
     if (books.shelf === "horror" && books.aorr === "onshelf") {
-      horrorBooks.push('<input type="button" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
+    horrorBooks.push('<input type="button" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
     }
   });
-$(function() {
-  $("#hb").html(horrorBooks);
-});
-$("#hb").html(horrorBooks);
-};
+    $("#hb").html(horrorBooks);
+}
 
 function mystery(books) {
   mysteryBooks = [];
@@ -39,4 +36,27 @@ function sciFi(books) {
   $("#sfb").html(sciFiBooks);
 }
 
+horror(books);
+mystery(books);
+sciFi(books);
+
+var removedBooks = [];
+
+var bookAorr = function(books) {
+  removedBooks = [];
+  _.forEach(books, function(books) {
+    if (books.aorr === "removed") {
+      removedBooks.push('<input type="button" value="Add" onclick="' + books.idNum + '.addBook()"> ' + books.title +  ' by ' + books.author + " (" + books.shelf + ")" + '<br>');
+    }
+  });
+  
+  $(function() {
+    $("#allremoved").html(removedBooks);
+  });
+};
+
+bookAorr(books);
+
 });
+
+
