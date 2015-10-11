@@ -1,0 +1,50 @@
+/*Table of Contents
+-body
+-Type
+-Links
+-Buttons
+-Forms
+*/
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  color: #000000;
+  background-color: #D2B48C;
+}
+
+h1 {
+  font-family: 'Kalam', cursive;
+  font-size: 48pt;
+  color: #00000;
+  text-align: left;
+  /*padding-top: 1em;*/
+}
+
+input {
+    color: #000000;
+    background-color: #fff;
+    border: 1px solid #708090;
+    border-radius: 5px;
+    padding: 7px;
+    background-repeat: no-repeat;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input:focus, input:hover {
+    background-color: #fff ;
+    border: 1px solid #708090;
+}
+
+.tdl {
+  position:fixed;
+  top: 1px;
+  left: 1px;
+}
+
+.tdh {
+  position:relative;
+  left: 400px;
+}
+
+

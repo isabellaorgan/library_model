@@ -1,26 +1,42 @@
-'use strict';
+// 'use strict';
 
-var book = require('./books.js');
+$(document).ready(function () {
 
-  var shelfModule = (function () {
-  return {
-    buildShelf: function (genre) {
-      console.log("The " + genre + " shelf has been added to the library shelves.");
-      return shelfModule[genre];
-    },
-    deleteShelf: function (genre) {
-      delete shelfModule[genre];
-      console.log("The " + genre + " shelf has been removed from the library.");
-    },
-    addBook: function (author, title, genre) {
-      console.log("The book " + title + " by " + author + " has been shelved on the " + genre + " shelf.");
-      return title;
-    },
-    removeBook: function (author, title, genre) {
-      console.log("The book " + title + " by " + author + " has been removed from the " + genre + " shelf.");
-      delete [book.bookTitle];
+var horrorBooks = [],
+    mysteryBooks = [],
+    sciFiBooks = [];
+
+var horror = function(books) {
+  horrorBooks = [];
+  _.forEach(books, function(books) {
+    if (books.shelf === "horror" && books.aorr === "onshelf") {
+      horrorBooks.push('<input type="button" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
     }
-  };
-})();
+  });
+$(function() {
+  $("#hb").html(horrorBooks);
+});
+$("#hb").html(horrorBooks);
+};
 
-exports.shelfModule = shelfModule;
+function mystery(books) {
+  mysteryBooks = [];
+  _.forEach(books, function(books) {
+    if (books.shelf === "mystery" && books.aorr === "onshelf") {
+      mysteryBooks.push('<input type="button" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
+    }
+  });
+  $("#mb").html(mysteryBooks);
+}
+
+function sciFi(books) {
+  sciFiBooks = [];
+  _.forEach(books, function(books) {
+    if (books.shelf === "scifi" && books.aorr === "onshelf") {
+      sciFiBooks.push('<input type="button" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
+    }
+  });
+  $("#sfb").html(sciFiBooks);
+}
+
+});
