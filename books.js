@@ -8,10 +8,11 @@ var Book = function(title, author, shelf, aorr, idNum) {
   this.idNum = idNum;
 };
 
-Book.prototype.removeBook = function(aorr) {
+Book.prototype.removeBook = function() {
   this.aorr = "removed";
   console.log(this.title + " " + this.aorr);
   $('#' + this.idNum).parent().toggle();
+
 };
 
 Book.prototype.addBook = function() {
