@@ -10,7 +10,7 @@ function horror(books) {
   horrorBooks = [];
   _.forEach(books, function(books) {
     if (books.shelf === "horror" && books.aorr === "onshelf") {
-    horrorBooks.push('<input type="button" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
+    var newHb = horrorBooks.push('<input type="submit" id="hb" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author);
     }
   });
     $("#hb").html(horrorBooks);
@@ -20,7 +20,7 @@ function mystery(books) {
   mysteryBooks = [];
   _.forEach(books, function(books) {
     if (books.shelf === "mystery" && books.aorr === "onshelf") {
-      mysteryBooks.push('<input type="button" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
+      var newMb = mysteryBooks.push('<input type="submit" id="mb" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author);
     }
   });
   $("#mb").html(mysteryBooks);
@@ -30,7 +30,7 @@ function sciFi(books) {
   sciFiBooks = [];
   _.forEach(books, function(books) {
     if (books.shelf === "scifi" && books.aorr === "onshelf") {
-      sciFiBooks.push('<input type="button" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author + '<br>');
+      var newSf = sciFiBooks.push('<input type="submit" id="sfb" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author);
     }
   });
   $("#sfb").html(sciFiBooks);
@@ -46,13 +46,10 @@ var bookAorr = function(books) {
   removedBooks = [];
   _.forEach(books, function(books) {
     if (books.aorr === "removed") {
-      removedBooks.push('<input type="button" value="Add" onclick="' + books.idNum + '.addBook()"> ' + books.title +  ' by ' + books.author + " (" + books.shelf + ")" + '<br>');
+      var newrmvB = removedBooks.push('<input type="submit" id="allremoved" value="Add" onclick="' + books.idNum + '.addBook()"> ' + books.title +  ' by ' + books.author + " (" + books.shelf + ")" + '<br>');
     }
   });
-  
-  $(function() {
-    $("#allremoved").html(removedBooks);
-  });
+  $("#allremoved").html(removedBooks);
 };
 
 bookAorr(books);

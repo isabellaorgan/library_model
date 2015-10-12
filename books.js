@@ -9,12 +9,10 @@ var Book = function(title, author, shelf, aorr, idNum) {
   this.removeBook = function() {
     this.aorr = "removed";
     console.log(this.title + " " + this.aorr);
-    
   };
   this.addBook = function() {
     this.aorr = "onshelf";
     console.log(this.title + " " + this.aorr);
-
   };
 };
 
