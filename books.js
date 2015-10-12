@@ -6,15 +6,20 @@ var Book = function(title, author, shelf, aorr, idNum) {
   this.shelf = shelf;
   this.aorr = aorr;
   this.idNum = idNum;
-  this.removeBook = function() {
-    this.aorr = "removed";
-    console.log(this.title + " " + this.aorr);
-  };
-  this.addBook = function() {
-    this.aorr = "onshelf";
-    console.log(this.title + " " + this.aorr);
-  };
 };
+
+Book.prototype.removeBook = function(aorr) {
+  this.aorr = "removed";
+  console.log(this.title + " " + this.aorr);
+  $('#' + this.idNum).parent().toggle();
+};
+
+Book.prototype.addBook = function() {
+  this.aorr = "onshelf";
+  console.log(this.title + " " + this.aorr);
+  $('#' + this.idNum).parent().toggle();
+};
+
 
 var itSk = new Book("It", "Stephen King", "horror", "onshelf", "itSk");
 var rdTh = new Book("Red Dragon", "Thomas Harris", "horror", "removed", "rdTh");

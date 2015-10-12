@@ -10,7 +10,7 @@ function horror(books) {
   horrorBooks = [];
   _.forEach(books, function(books) {
     if (books.shelf === "horror" && books.aorr === "onshelf") {
-    var newHb = horrorBooks.push('<input type="submit" id="hb" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author);
+    var newHb = horrorBooks.push('<input type="submit" id="itSk" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author);
     }
   });
     $("#hb").html(horrorBooks);
@@ -46,7 +46,7 @@ var bookAorr = function(books) {
   removedBooks = [];
   _.forEach(books, function(books) {
     if (books.aorr === "removed") {
-      var newrmvB = removedBooks.push('<input type="submit" id="allremoved" value="Add" onclick="' + books.idNum + '.addBook()"> ' + books.title +  ' by ' + books.author + " (" + books.shelf + ")" + '<br>');
+      var newrmvB = removedBooks.push('<input type="submit" id="rdTh" value="Add" onclick="' + books.idNum + '.addBook()"> ' + books.title +  ' by ' + books.author + " (" + books.shelf + ")" + '<br>');
     }
   });
   $("#allremoved").html(removedBooks);
@@ -55,5 +55,7 @@ var bookAorr = function(books) {
 bookAorr(books);
 
 });
+
+
 
 
