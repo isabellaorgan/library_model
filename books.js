@@ -12,6 +12,7 @@ Book.prototype.removeBook = function() {
   this.aorr = "removed";
   console.log(this.title + " " + this.aorr);
   $('#' + this.idNum).parent().toggle();
+  bookAorr(books);
 
 };
 
@@ -19,6 +20,19 @@ Book.prototype.addBook = function() {
   this.aorr = "onshelf";
   console.log(this.title + " " + this.aorr);
   $('#' + this.idNum).parent().toggle();
+  bookAorr(books);
+};
+
+var removedBooks = [];
+
+var bookAorr = function(books) {
+  removedBooks = [];
+  var newrmvB = $.map(books, function(books) {
+    if (books.aorr === "removed") {
+    removedBooks.push('<input type="submit" id="rdTh" value="Add" onclick="' + books.idNum + '.addBook()"> ' + books.title +  ' by ' + books.author + " (" + books.shelf + ")" + '<br>');
+    }
+  });
+  $("#allremoved").html(removedBooks);
 };
 
 
