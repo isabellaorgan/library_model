@@ -3,27 +3,27 @@
 $(document).ready(function () {
 
 $("#addHorrorShelf").click(function() {
-  $("#horror").show();
+  $("#horror-shelf").show();
   });
 
 $("#removeHorrorShelf").click(function() {
-  $("#horror").hide();
+  $("#horror-shelf").hide();
   });
 
 $("#addMysteryShelf").click(function() {
-  $("#mystery").show();
+  $("#mystery-shelf").show();
   });
 
 $("#removeMysteryShelf").click(function() {
-  $("#mystery").hide();
+  $("#mystery-shelf").hide();
   });
 
 $("#addSciFiShelf").click(function() {
-  $("#sciFi").show();
+  $("#sciFi-shelf").show();
   });
 
 $("#removeSciFiShelf").click(function() {
-  $("#sciFi").hide();
+  $("#sciFi-shelf").hide();
   });
 
 
