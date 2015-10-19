@@ -13,15 +13,12 @@ Book.prototype.removeBook = function() {
   this.aorr = "removed";
   console.log(this.title + " " + this.aorr);
   bookAorr(books);
-   // $('#' + this.idNum).parent().toggle();
-
 };
 
 Book.prototype.addBook = function() {
   this.aorr = "onshelf";
   console.log(this.title + " " + this.shelf);
   bookAorr(books);
-   // $('#' + this.idNum).parent().toggle();
 };
   
 var removedBooks = [];
