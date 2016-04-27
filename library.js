@@ -1,30 +1,29 @@
 'use strict';
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-$("#addHorrorShelf").click(function() {
-  $("#horror-shelf").show();
+$('#addHorrorShelf').click(function() {
+  $('#horror-shelf').show();
   });
 
-$("#removeHorrorShelf").click(function() {
-  $("#horror-shelf").hide();
+$('#removeHorrorShelf').click(function() {
+  $('#horror-shelf').hide();
   });
 
-$("#addMysteryShelf").click(function() {
-  $("#mystery-shelf").show();
+$('#addMysteryShelf').click(function() {
+  $('#mystery-shelf').show();
   });
 
-$("#removeMysteryShelf").click(function() {
-  $("#mystery-shelf").hide();
+$('#removeMysteryShelf').click(function() {
+  $('#mystery-shelf').hide();
   });
 
-$("#addSciFiShelf").click(function() {
-  $("#sciFi-shelf").show();
+$('#addSciFiShelf').click(function() {
+  $('#sciFi-shelf').show();
   });
 
-$("#removeSciFiShelf").click(function() {
-  $("#sciFi-shelf").hide();
+$('#removeSciFiShelf').click(function() {
+  $('#sciFi-shelf').hide();
   });
-
 
 });

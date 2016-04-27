@@ -1,6 +1,6 @@
 'use strict';
 
-$(document).ready(function () {
+$(document).ready(function() {
 
 var horrorBooks = [];
 var mysteryBooks = [];
@@ -9,31 +9,31 @@ var sciFiBooks = [];
 function horror(books) {
   horrorBooks = [];
   var newHb = $.map(books, function(books) {
-    if (books.shelf === "horror" && books.aorr === "onshelf") {
-  horrorBooks.push('<input type="button" id="' + books.idNum + '" value="Remove" onclick="' + books.idNum +  '.removeBook()"> ' + books.title + ' by ' + books.author);
+    if (books.shelf === 'horror' && books.aorr === 'onshelf') {
+  horrorBooks.push('<input type="button" id="' + books.idNum + '" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author);
     }
   });
-  $("#hb").html(horrorBooks);
+  $('#hb').html(horrorBooks);
 }
 
 function mystery(books) {
   mysteryBooks = [];
   var newMb = $.map(books, function(books) {
-    if (books.shelf === "mystery" && books.aorr === "onshelf") {
+    if (books.shelf === 'mystery' && books.aorr === 'onshelf') {
     mysteryBooks.push('<input type="submit" id="' + books.idNum + '" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author);
     }
   });
-  $("#mb").html(mysteryBooks);
+  $('#mb').html(mysteryBooks);
 }
 
 function sciFi(books) {
   sciFiBooks = [];
   var newSf = $.map(books, function(books) {
-    if (books.shelf === "scifi" && books.aorr === "onshelf") {
+    if (books.shelf === 'scifi' && books.aorr === 'onshelf') {
     sciFiBooks.push('<input type="submit" id="' + books.idNum + '" value="Remove" onclick="' + books.idNum + '.removeBook()"> ' + books.title + ' by ' + books.author);
     }
   });
-  $("#sfb").html(sciFiBooks);
+  $('#sfb').html(sciFiBooks);
 }
 
 horror(books);
@@ -42,6 +42,3 @@ sciFi(books);
 bookAorr(books);
 
 });
-
-
-
